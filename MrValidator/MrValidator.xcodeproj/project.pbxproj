@@ -10,6 +10,8 @@
 		BE7FE0BD1DBE7DF400565CF1 /* MrValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7FE0B31DBE7DF400565CF1 /* MrValidator.framework */; };
 		BE7FE0C21DBE7DF400565CF1 /* MrValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7FE0C11DBE7DF400565CF1 /* MrValidatorTests.swift */; };
 		BE7FE0C41DBE7DF400565CF1 /* MrValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7FE0B61DBE7DF400565CF1 /* MrValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE7FE0CE1DBE814200565CF1 /* MrValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7FE0CD1DBE814200565CF1 /* MrValidator.swift */; };
+		BE7FE0D01DBE82B600565CF1 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7FE0CF1DBE82B600565CF1 /* Validate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		BE7FE0BC1DBE7DF400565CF1 /* MrValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7FE0C11DBE7DF400565CF1 /* MrValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MrValidatorTests.swift; sourceTree = "<group>"; };
 		BE7FE0C31DBE7DF400565CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE7FE0CD1DBE814200565CF1 /* MrValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MrValidator.swift; sourceTree = "<group>"; };
+		BE7FE0CF1DBE82B600565CF1 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 		BE7FE0B51DBE7DF400565CF1 /* MrValidator */ = {
 			isa = PBXGroup;
 			children = (
-				BE7FE0B61DBE7DF400565CF1 /* MrValidator.h */,
 				BE7FE0B71DBE7DF400565CF1 /* Info.plist */,
+				BE7FE0B61DBE7DF400565CF1 /* MrValidator.h */,
+				BE7FE0CD1DBE814200565CF1 /* MrValidator.swift */,
+				BE7FE0CF1DBE82B600565CF1 /* Validate.swift */,
 			);
 			path = MrValidator;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 					BE7FE0B21DBE7DF400565CF1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = A427M6NC8W;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					BE7FE0BB1DBE7DF400565CF1 = {
@@ -198,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7FE0CE1DBE814200565CF1 /* MrValidator.swift in Sources */,
+				BE7FE0D01DBE82B600565CF1 /* Validate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 		BE7FE0C81DBE7DF400565CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A427M6NC8W;
@@ -334,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeandcoding.MrValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +352,7 @@
 		BE7FE0C91DBE7DF400565CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A427M6NC8W;
@@ -360,6 +372,7 @@
 		BE7FE0CB1DBE7DF400565CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = A427M6NC8W;
 				INFOPLIST_FILE = MrValidatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +385,7 @@
 		BE7FE0CC1DBE7DF400565CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = A427M6NC8W;
 				INFOPLIST_FILE = MrValidatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
